@@ -5,10 +5,8 @@ Projects using the p5js library
 
 Things you will need
 
-```
 * [P5js](http://p5js.org/)
 * [node.js](http://nodejs.org/)
-```
 
 ## Built With
 
