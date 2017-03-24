@@ -1,4 +1,4 @@
-# p5js_projects
+# P5js Projects
 Projects using the p5js library
 
 ### Prerequisites
