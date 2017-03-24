@@ -3,7 +3,7 @@ Projects using the p5js library
 
 ### Prerequisites
 
-Things you will need...
+Things you will need
 
 ```
 * [P5js](http://p5js.org/)
