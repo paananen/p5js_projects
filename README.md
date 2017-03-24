@@ -10,10 +10,6 @@ Things you will need
 * [node.js](http://nodejs.org/)
 ```
 
-## Deployment
-
-Clone and run
-
 ## Built With
 
 * [P5js](http://p5js.org/) - JavaScript library
