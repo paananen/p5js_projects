@@ -24,20 +24,43 @@ random parameters:
 
 var api = "http://api.giphy.com/v1/gifs/search?";
 var apiKey = "&api_key=dc6zaTOxFJmzC";
-
-var trendingURL = 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC';
+var resultLimit = 25;
+var resultOffset = 0;
 var randomURL = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=';
+var resultOffset = '&offset='
 
 function setup() {
   noCanvas();
   var params = getURLParams();
   var query = '&q=' + params.s;
-  var url = api + apiKey + query;
+  var offset = '&offset=' + params.o;
+  var url = api + apiKey + query + offset;
+
+  for (var i = 0; i < resultLimit; i++) {
+    var cardID = 'c' + i;
+    createDiv('').addClass('card text-center').id(cardID).parent('cardholder');
+  }
+
   loadJSON(url, gotData);
 }
 
 function gotData(giphy) {
   for (var i = 0; i < giphy.data.length; i++) {
-    createImg(giphy.data[i].images.original.url).parent('gifs').addClass('img-thumbnail');
+    var parentID = 'c' + i;
+    var parentBlockID = 'cb' + i;
+    createImg(giphy.data[i].images.fixed_width_downsampled.url).parent(parentID).addClass('card-img-top img-fluid');
+  }
+
+  for (var i = 0; i < resultLimit; i++) {
+    var parentID = 'c' + i;
+    var cardBlockID = 'cb' + i;
+    createDiv('').addClass('card-block').id(cardBlockID).parent(parentID).style('padding-top', '0').style('padding-right', '0');
+  }
+
+  for (var i = 0; i < resultLimit; i++) {
+    var parentID = 'cb' + i;
+    var id = 'gifLink' + i;
+    var url = giphy.data[i].images.original.url;
+    createA(url, '&#x221e;').parent(parentID).addClass('gifLink float-right').attribute('target', '_blank').style('text-decoration', 'none');
   }
 }
