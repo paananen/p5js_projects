@@ -13,6 +13,7 @@ Things you will need
 
 * [P5js](http://p5js.org/)
 * [node.js](http://nodejs.org/)
+* [Processing](https://processing.org/) - only for projects in the processing directory
 
 ## Built With
 
