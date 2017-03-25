@@ -8,7 +8,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 var server = app.listen(port, function(){
-  console.log('listening on port ' + port);
+  console.log('URL: http://localhost:' + port);
 });
 
 app.use(express.static('public'));

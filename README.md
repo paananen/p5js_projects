@@ -1,6 +1,12 @@
 # P5js Projects
 Projects using the p5js library
 
+# Running
+* cd to target project folder
+* npm install
+* node index.js
+* console output will show the current project's URL
+
 ### Prerequisites
 
 Things you will need
