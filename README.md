@@ -29,7 +29,7 @@ Nope
 
 ## Author
 
-* **Tim Paananen** - *Initial work* - [Paananenenanaap](https://github.com/paananen/)
+* **Tim Paananen** - [Paananenenanaap](https://github.com/paananen/)
 
 
 ## License
