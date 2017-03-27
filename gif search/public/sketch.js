@@ -27,6 +27,7 @@ var apiKey = "&api_key=dc6zaTOxFJmzC";
 var resultLimit = 25;
 var resultOffset = 0;
 var randomURL = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=';
+var trendingURL = 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC';
 var resultOffset = '&offset='
 
 function setup() {
@@ -42,6 +43,9 @@ function setup() {
     }
 
     var url = api + apiKey + query + '&offset=' + offset;
+    if (!params.s) {
+      url = trendingURL;
+    }
 
     for (var i = 0; i < resultLimit; i++) {
       var cardID = 'c' + i;
